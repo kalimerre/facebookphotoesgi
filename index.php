@@ -15,7 +15,7 @@
 
     FacebookSession::setDefaultApplication(APPID, APPSECRET);
     $helper = new FacebookRedirectLoginHelper('https://facebookphotoesgi.herokuapp.com/');
-    $loginUrl = $helper->getLoginUrl();
+    
     if(isset($_SESSION) && isset($_SESSION['fb_token'])){
         $session = new FacebookSession($_SESSION['fb_token']);
     } else {
@@ -23,7 +23,7 @@
     }
     
 
-    
+    $loginUrl = $helper->getLoginUrl();
 
     if($session){
             try{
