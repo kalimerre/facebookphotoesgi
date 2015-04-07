@@ -14,7 +14,7 @@
     const APPSECRET = "d3bbc76ac84862edf3d726353a10b77c";
 
     FacebookSession::setDefaultApplication(APPID, APPSECRET);
-    $helper = new FacebookRedirectLoginHelper('http://localhost/');
+    $helper = new FacebookRedirectLoginHelper('https://facebookphotoesgi.herokuapp.com/');
     
     if(isset($_SESSION) && isset($_SESSION['fb_token'])){
         $session = new FacebookSession($_SESSION['fb_token']);
