@@ -30,7 +30,7 @@
             try{
                 $user_profile = (new FacebookRequest($session, 'GET', '/me'))->execute()->getGraphObject(GraphUser::className());
                 echo "Nom : ". $user_profile->getName();
-                
+                var_dump($user_profile);
             }
             catch(FacebookRequestException $e){
                 echo "Exception occured code : ". $e->getCode();
